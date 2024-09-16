@@ -1,0 +1,7 @@
+org\welfaresystems\welfaresessentials\Commands\GetWandCommand.class
+org\welfaresystems\welfaresessentials\WelfareSEssentials.class
+org\welfaresystems\welfaresessentials\Managers\SpellManager.class
+org\welfaresystems\welfaresessentials\Listeners\SpellMenu.class
+org\welfaresystems\welfaresessentials\Managers\MenuManager.class
+org\welfaresystems\welfaresessentials\Listeners\WandListener.class
+org\welfaresystems\welfaresessentials\Utils\Keys.class

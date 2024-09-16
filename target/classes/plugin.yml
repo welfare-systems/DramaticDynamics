@@ -1,0 +1,22 @@
+name: WelfareSEssentials
+version: '1.0.0'
+main: org.welfaresystems.welfaresessentials.WelfareSEssentials
+api-version: '1.21'
+authors: [ Jonathan Vazquez ]
+description: Essential admin tools used for maintaining a Minecraft Server powered by Welfare System
+commands:
+  getWand:
+    description: "Get admin tool wand"
+    usage: "/getWand"
+    permission: getWand.wand
+    permission-message: "You do not have permission to execute this command"
+  getMace:
+    description: "Get admin tool mace"
+    usage: "/getMace"
+    permission: getMace.mace
+    permission-message: "You do not have permission to execute this command"
+permissions:
+  getWand.wand:
+    default: op
+  getMace.mace:
+    default: op
