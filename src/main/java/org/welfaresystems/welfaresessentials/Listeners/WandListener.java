@@ -34,24 +34,18 @@ public class WandListener implements Listener {
             }
         }
 
-        //Lightning Spell
         if (event.getAction() == Action.LEFT_CLICK_AIR || event.getAction() == Action.LEFT_CLICK_BLOCK) {
             if (item.getType() == Material.BLAZE_ROD && item.hasItemMeta()) {
                 if (item.getItemMeta().getPersistentDataContainer().has(Keys.CUSTOM_WAND, PersistentDataType.BOOLEAN)) {
                     String selectedSpell = spellManager.getSelectedSpell(player);
+
+                    //Lightning Spell
                     if ("Lightning_Spell".equals(selectedSpell)) {
                         Location targetLocation = player.getTargetBlock(null, 200).getLocation();
                         player.getWorld().strikeLightning(targetLocation);
                     }
-                }
-            }
-        }
 
-        //Fireball Spell
-        if (event.getAction() == Action.LEFT_CLICK_AIR || event.getAction() == Action.LEFT_CLICK_BLOCK) {
-            if (item.getType() == Material.BLAZE_ROD && item.hasItemMeta()) {
-                if (item.getItemMeta().getPersistentDataContainer().has(Keys.CUSTOM_WAND, PersistentDataType.BOOLEAN)) {
-                    String selectedSpell = spellManager.getSelectedSpell(player);
+                    //Fireball
                     if ("Fireball_Spell".equals(selectedSpell)) {
                         Location targetLocation = player.getTargetBlock(null, 200).getLocation();
                         Vector direction = targetLocation.toVector().subtract(player.getLocation().toVector()).normalize();
@@ -59,15 +53,8 @@ public class WandListener implements Listener {
                         fireball.setShooter(player);
                         fireball.setDirection(direction);
                     }
-                }
-            }
-        }
 
-        //Healing Spell
-        if (event.getAction() == Action.LEFT_CLICK_AIR || event.getAction() == Action.LEFT_CLICK_BLOCK) {
-            if (item.getType() == Material.BLAZE_ROD && item.hasItemMeta()) {
-                if (item.getItemMeta().getPersistentDataContainer().has(Keys.CUSTOM_WAND, PersistentDataType.BOOLEAN)) {
-                    String selectedSpell = spellManager.getSelectedSpell(player);
+                    //Healing Spell
                     if ("Healing_Spell".equals(selectedSpell)) {
                         player.setHealth(player.getAttribute(org.bukkit.attribute.Attribute.GENERIC_MAX_HEALTH).getValue());
                         player.setFoodLevel(20);
@@ -76,28 +63,14 @@ public class WandListener implements Listener {
                             location.getWorld().spawnParticle(Particle.HEART, location, 1, 0.5, 0.5, 0.5, 0);
                         }
                     }
-                }
-            }
-        }
 
-        //Explosion Spell
-        if (event.getAction() == Action.LEFT_CLICK_AIR || event.getAction() == Action.LEFT_CLICK_BLOCK) {
-            if (item.getType() == Material.BLAZE_ROD && item.hasItemMeta()) {
-                if (item.getItemMeta().getPersistentDataContainer().has(Keys.CUSTOM_WAND, PersistentDataType.BOOLEAN)) {
-                    String selectedSpell = spellManager.getSelectedSpell(player);
+                    //Explosion Spell
                     if ("Explosion_Spell".equals(selectedSpell)) {
                         Location targetLocation = player.getTargetBlock(null, 200).getLocation();
                         player.getWorld().createExplosion(targetLocation, 4.0F, false, false);
                     }
-                }
-            }
-        }
 
-        //Teleportation Spell
-        if (event.getAction() == Action.LEFT_CLICK_AIR || event.getAction() == Action.LEFT_CLICK_BLOCK) {
-            if (item.getType() == Material.BLAZE_ROD && item.hasItemMeta()) {
-                if (item.getItemMeta().getPersistentDataContainer().has(Keys.CUSTOM_WAND, PersistentDataType.BOOLEAN)) {
-                    String selectedSpell = spellManager.getSelectedSpell(player);
+                    //Teleportation Spell
                     if ("Teleportation_Spell".equals(selectedSpell)) {
                         Location targetLocation = player.getTargetBlock(null, 200).getLocation();
                         targetLocation.setY(targetLocation.getY() + 1);

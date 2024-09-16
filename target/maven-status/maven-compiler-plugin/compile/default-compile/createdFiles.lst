@@ -1,7 +1,14 @@
-org\welfaresystems\welfaresessentials\Commands\GetWandCommand.class
+org\welfaresystems\welfaresessentials\Listeners\MaceMenu.class
 org\welfaresystems\welfaresessentials\WelfareSEssentials.class
+org\welfaresystems\welfaresessentials\Managers\MaceManager.class
 org\welfaresystems\welfaresessentials\Managers\SpellManager.class
 org\welfaresystems\welfaresessentials\Listeners\SpellMenu.class
+org\welfaresystems\welfaresessentials\Commands\GetWandCommand.class
+org\welfaresystems\welfaresessentials\Listeners\MaceListener$1.class
+org\welfaresystems\welfaresessentials\Listeners\MaceListener.class
+org\welfaresystems\welfaresessentials\Commands\GetMaceCommand.class
+org\welfaresystems\welfaresessentials\Listeners\MaceListener$2.class
+org\welfaresystems\welfaresessentials\Listeners\MaceListener$3.class
 org\welfaresystems\welfaresessentials\Managers\MenuManager.class
 org\welfaresystems\welfaresessentials\Listeners\WandListener.class
 org\welfaresystems\welfaresessentials\Utils\Keys.class
