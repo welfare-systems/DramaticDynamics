@@ -1,13 +1,13 @@
-package org.welfaresystems.welfaresessentials.Listeners;
+package org.welfaresystems.dramaticdynamics.Listeners;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import org.welfaresystems.welfaresessentials.Managers.MaceManager;
-import org.welfaresystems.welfaresessentials.Managers.MenuManager;
-import org.welfaresystems.welfaresessentials.WelfareSEssentials;
+import org.welfaresystems.dramaticdynamics.DramaticDynamics;
+import org.welfaresystems.dramaticdynamics.Managers.MaceManager;
+import org.welfaresystems.dramaticdynamics.Managers.MenuManager;
 
 public class MaceMenu extends MenuManager {
     public MaceMenu() {
@@ -29,7 +29,7 @@ public class MaceMenu extends MenuManager {
             if (event.getCurrentItem() != null && event.getCurrentItem().hasItemMeta()) {
                 Player player = (Player) event.getWhoClicked();
                 String actionName = event.getCurrentItem().getItemMeta().getDisplayName();
-                MaceManager maceManager = WelfareSEssentials.getInstance().getMaceManager();
+                MaceManager maceManager = DramaticDynamics.getInstance().getMaceManager();
                 switch (actionName) {
                     case "§bBan":
                         maceManager.clearSelectedAction(player);

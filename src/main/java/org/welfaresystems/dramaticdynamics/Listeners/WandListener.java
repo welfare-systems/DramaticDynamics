@@ -1,4 +1,4 @@
-package org.welfaresystems.welfaresessentials.Listeners;
+package org.welfaresystems.dramaticdynamics.Listeners;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -14,9 +14,9 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.util.Vector;
-import org.welfaresystems.welfaresessentials.Managers.SpellManager;
-import org.welfaresystems.welfaresessentials.Utils.Keys;
-import org.welfaresystems.welfaresessentials.WelfareSEssentials;
+import org.welfaresystems.dramaticdynamics.DramaticDynamics;
+import org.welfaresystems.dramaticdynamics.Managers.SpellManager;
+import org.welfaresystems.dramaticdynamics.Utils.Keys;
 
 public class WandListener implements Listener {
 
@@ -24,7 +24,7 @@ public class WandListener implements Listener {
     public void onPlayerUseWand(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         ItemStack item = player.getInventory().getItemInMainHand();
-        SpellManager spellManager = WelfareSEssentials.getInstance().getSpellManager();
+        SpellManager spellManager = DramaticDynamics.getInstance().getSpellManager();
 
         if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
             if (item.getType() == Material.BLAZE_ROD && item.hasItemMeta()) {

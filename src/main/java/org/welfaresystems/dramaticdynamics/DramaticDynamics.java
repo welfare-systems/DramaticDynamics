@@ -1,14 +1,14 @@
-package org.welfaresystems.welfaresessentials;
+package org.welfaresystems.dramaticdynamics;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import org.welfaresystems.welfaresessentials.Commands.GetMaceCommand;
-import org.welfaresystems.welfaresessentials.Commands.GetWandCommand;
-import org.welfaresystems.welfaresessentials.Listeners.MaceListener;
-import org.welfaresystems.welfaresessentials.Listeners.WandListener;
-import org.welfaresystems.welfaresessentials.Managers.MaceManager;
-import org.welfaresystems.welfaresessentials.Managers.SpellManager;
+import org.welfaresystems.dramaticdynamics.Commands.GetMaceCommand;
+import org.welfaresystems.dramaticdynamics.Commands.GetWandCommand;
+import org.welfaresystems.dramaticdynamics.Listeners.MaceListener;
+import org.welfaresystems.dramaticdynamics.Listeners.WandListener;
+import org.welfaresystems.dramaticdynamics.Managers.MaceManager;
+import org.welfaresystems.dramaticdynamics.Managers.SpellManager;
 
-public final class WelfareSEssentials extends JavaPlugin {
+public final class DramaticDynamics extends JavaPlugin {
 
     private SpellManager spellManager;
     private MaceManager maceManager;
@@ -18,7 +18,7 @@ public final class WelfareSEssentials extends JavaPlugin {
         spellManager = new SpellManager();
         maceManager = new MaceManager();
         getServer().getConsoleSender().sendMessage("§a===============================================");
-        getServer().getConsoleSender().sendMessage("§a  Plugin: §6WelfareSEssentials");
+        getServer().getConsoleSender().sendMessage("§a  Plugin: §DramaticDynamics");
         getServer().getConsoleSender().sendMessage("§a  Status: §aEnabled Successfully.");
         getServer().getConsoleSender().sendMessage("§a  Versión: §61.0.0");
         getServer().getConsoleSender().sendMessage("§a  Author: §bJonathan V.");
@@ -51,7 +51,7 @@ public final class WelfareSEssentials extends JavaPlugin {
         return maceManager;
     }
 
-    public static WelfareSEssentials getInstance() {
-        return getPlugin(WelfareSEssentials.class);
+    public static DramaticDynamics getInstance() {
+        return getPlugin(DramaticDynamics.class);
     }
 }

@@ -1,4 +1,4 @@
-package org.welfaresystems.welfaresessentials.Managers;
+package org.welfaresystems.dramaticdynamics.Managers;
 
 import org.bukkit.entity.Player;
 

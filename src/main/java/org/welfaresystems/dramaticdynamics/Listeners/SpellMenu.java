@@ -1,13 +1,13 @@
-package org.welfaresystems.welfaresessentials.Listeners;
+package org.welfaresystems.dramaticdynamics.Listeners;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import org.welfaresystems.welfaresessentials.Managers.MenuManager;
-import org.welfaresystems.welfaresessentials.Managers.SpellManager;
-import org.welfaresystems.welfaresessentials.WelfareSEssentials;
+import org.welfaresystems.dramaticdynamics.DramaticDynamics;
+import org.welfaresystems.dramaticdynamics.Managers.MenuManager;
+import org.welfaresystems.dramaticdynamics.Managers.SpellManager;
 
 public class SpellMenu extends MenuManager {
     public SpellMenu() {
@@ -31,7 +31,7 @@ public class SpellMenu extends MenuManager {
             if (event.getCurrentItem() != null && event.getCurrentItem().hasItemMeta()) {
                 Player player = (Player) event.getWhoClicked();
                 String spellName = event.getCurrentItem().getItemMeta().getDisplayName();
-                SpellManager spellManager = WelfareSEssentials.getInstance().getSpellManager();
+                SpellManager spellManager = DramaticDynamics.getInstance().getSpellManager();
                 switch (spellName) {
                     case "§bFireball Spell":
                         spellManager.clearSelectedSpell(player);

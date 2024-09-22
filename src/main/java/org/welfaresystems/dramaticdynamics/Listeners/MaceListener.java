@@ -1,4 +1,4 @@
-package org.welfaresystems.welfaresessentials.Listeners;
+package org.welfaresystems.dramaticdynamics.Listeners;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -13,9 +13,9 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.scheduler.BukkitRunnable;
-import org.welfaresystems.welfaresessentials.Managers.MaceManager;
-import org.welfaresystems.welfaresessentials.Utils.Keys;
-import org.welfaresystems.welfaresessentials.WelfareSEssentials;
+import org.welfaresystems.dramaticdynamics.DramaticDynamics;
+import org.welfaresystems.dramaticdynamics.Managers.MaceManager;
+import org.welfaresystems.dramaticdynamics.Utils.Keys;
 
 import java.time.Duration;
 
@@ -24,7 +24,7 @@ public class MaceListener implements Listener {
     public void onPlayerUseMace(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         ItemStack item = player.getInventory().getItemInMainHand();
-        MaceManager maceManager = WelfareSEssentials.getInstance().getMaceManager();
+        MaceManager maceManager = DramaticDynamics.getInstance().getMaceManager();
 
         if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
             if (item.getType() == Material.MACE && item.hasItemMeta()) {
@@ -43,7 +43,7 @@ public class MaceListener implements Listener {
         Player attacker = (Player) event.getDamager();
         Player target = (Player) event.getEntity();
         ItemStack item = attacker.getInventory().getItemInMainHand();
-        MaceManager maceManager = WelfareSEssentials.getInstance().getMaceManager();
+        MaceManager maceManager = DramaticDynamics.getInstance().getMaceManager();
         String selectedAction = maceManager.getSelectedAction(attacker);
 
         if (item.getType() == Material.MACE && item.hasItemMeta()) {
@@ -60,7 +60,7 @@ public class MaceListener implements Listener {
                             target.ban(ChatColor.DARK_RED + "" + ChatColor.BOLD + "You have been banned: You have suffered the wrath of the Administrator through The Mace of Justice", (Duration) null, attacker.getName(), true);
                             Bukkit.broadcastMessage(ChatColor.RED + "" + ChatColor.BOLD + ChatColor.ITALIC + target.getName() + " has been banned by " + attacker.getName() + " using The Mace of Justice.");
                         }
-                    }.runTaskLater(WelfareSEssentials.getInstance(), 20L);
+                    }.runTaskLater(DramaticDynamics.getInstance(), 20L);
                 }
 
                 //Kick Action
@@ -74,7 +74,7 @@ public class MaceListener implements Listener {
                             target.kickPlayer(ChatColor.RED + "" + ChatColor.BOLD + "You have suffered the wrath of the Administrator through The Mace of Justice");
                             Bukkit.broadcastMessage(ChatColor.RED + "" + ChatColor.BOLD + ChatColor.ITALIC + target.getName() + " has been kicked from this server by " + attacker.getName() + " using The Mace of Justice.");
                         }
-                    }.runTaskLater(WelfareSEssentials.getInstance(), 20L);
+                    }.runTaskLater(DramaticDynamics.getInstance(), 20L);
                 }
 
                 //Warn Action
@@ -97,7 +97,7 @@ public class MaceListener implements Listener {
 
                             ticks += 10;
                         }
-                    }.runTaskTimer(WelfareSEssentials.getInstance(), 0, 10);
+                    }.runTaskTimer(DramaticDynamics.getInstance(), 0, 10);
 
                     Bukkit.broadcastMessage(ChatColor.RED + "" + ChatColor.BOLD + ChatColor.ITALIC + target.getName() + " has been obliterated by " + attacker.getName() + " using The Mace of Justice.");
                 }

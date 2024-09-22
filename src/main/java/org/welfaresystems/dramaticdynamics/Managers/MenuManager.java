@@ -1,4 +1,4 @@
-package org.welfaresystems.welfaresessentials.Managers;
+package org.welfaresystems.dramaticdynamics.Managers;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -9,7 +9,7 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.welfaresystems.welfaresessentials.WelfareSEssentials;
+import org.welfaresystems.dramaticdynamics.DramaticDynamics;
 
 public abstract class MenuManager implements Listener {
     public final Inventory menu;
@@ -17,7 +17,7 @@ public abstract class MenuManager implements Listener {
     public MenuManager(String title, Integer space) {
         this.menu = Bukkit.createInventory(null, space, title);
         this.setup();
-        WelfareSEssentials.getInstance().getServer().getPluginManager().registerEvents(this, WelfareSEssentials.getInstance());
+        DramaticDynamics.getInstance().getServer().getPluginManager().registerEvents(this, DramaticDynamics.getInstance());
     }
 
     //Here is expected to have addItemToMenu method
