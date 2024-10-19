@@ -1,9 +1,9 @@
-name: WelfareSEssentials
+name: DramaticDynamics
 version: '0.0.1'
-main: org.welfaresystems.welfaresessentials.WelfareSEssentials
+main: org.welfaresystems.dramaticdynamics.DramaticDynamics
 api-version: '1.21'
 authors: [ Jonathan Vazquez ]
-description: Essential admin tools used for maintaining a Minecraft Server powered by Welfare System
+description: Dynamics such as mod actions and magic wands to troll members that add a taste of fun to your server.
 commands:
   getWand:
     description: "Get admin tool wand"
@@ -15,6 +15,15 @@ commands:
     usage: "/getMace"
     permission: getMace.mace
     permission-message: "You do not have permission to execute this command"
+  playAlarm:
+    description: "Play disasters alarm"
+    usage: "/playAlarm type"
+    permission: playAlarm.play
+    permission-message: "You do not have permission to execute this command"
+  reloadConfig:
+    description: "Reloads configuration files"
+    usage: "/reloadConfig"
+    permission: "reloadConfig.reload"
 permissions:
   getWand.wand:
     default: op

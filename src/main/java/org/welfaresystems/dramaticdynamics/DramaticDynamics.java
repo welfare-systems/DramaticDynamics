@@ -1,6 +1,8 @@
 package org.welfaresystems.dramaticdynamics;
 
 import org.bukkit.plugin.java.JavaPlugin;
+import org.welfaresystems.dramaticdynamics.Commands.Alarms.PlayAlarm;
+import org.welfaresystems.dramaticdynamics.Commands.Config.ReloadConfig;
 import org.welfaresystems.dramaticdynamics.Commands.GetMaceCommand;
 import org.welfaresystems.dramaticdynamics.Commands.GetWandCommand;
 import org.welfaresystems.dramaticdynamics.Listeners.MaceListener;
@@ -15,6 +17,8 @@ public final class DramaticDynamics extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        this.saveDefaultConfig();
+
         spellManager = new SpellManager();
         maceManager = new MaceManager();
         getServer().getConsoleSender().sendMessage("§a===============================================");
@@ -27,6 +31,8 @@ public final class DramaticDynamics extends JavaPlugin {
         //Commands
         getCommand("getWand").setExecutor(new GetWandCommand());
         getCommand("getMace").setExecutor(new GetMaceCommand());
+        getCommand("playAlarm").setExecutor(new PlayAlarm());
+        getCommand("reloadConfig").setExecutor(new ReloadConfig());
 
         //Listeners
         getServer().getPluginManager().registerEvents(new WandListener(), this);

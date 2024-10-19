@@ -15,6 +15,15 @@ commands:
     usage: "/getMace"
     permission: getMace.mace
     permission-message: "You do not have permission to execute this command"
+  playAlarm:
+    description: "Play disasters alarm"
+    usage: "/playAlarm type"
+    permission: playAlarm.play
+    permission-message: "You do not have permission to execute this command"
+  reloadConfig:
+    description: "Reloads configuration files"
+    usage: "/reloadConfig"
+    permission: "reloadConfig.reload"
 permissions:
   getWand.wand:
     default: op
